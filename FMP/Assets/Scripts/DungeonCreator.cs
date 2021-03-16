@@ -21,10 +21,9 @@ public class DungeonCreator : MonoBehaviour
     List<Vector3Int> possibleDoorHorizontalPosition;
     List<Vector3Int> possibleWallHorizontalPosition;
     List<Vector3Int> possibleWallVerticalPosition;
-    // Start is called before the first frame update
     void Start()
     {
-        CreateDungeon();
+        
     }
 
     public void CreateDungeon()
@@ -46,6 +45,7 @@ public class DungeonCreator : MonoBehaviour
         possibleWallVerticalPosition = new List<Vector3Int>();
         for (int i = 0; i < listOfRooms.Count; i++)
         {
+           
             CreateMesh(listOfRooms[i].BottomLeftAreaCorner, listOfRooms[i].TopRightAreaCorner);
         }
         CreateWalls(wallParent);
@@ -103,12 +103,13 @@ public class DungeonCreator : MonoBehaviour
         mesh.uv = uvs;
         mesh.triangles = triangles;
 
-        GameObject dungeonFloor = new GameObject("Mesh" + bottomLeftCorner, typeof(MeshFilter), typeof(MeshRenderer));
+        GameObject dungeonFloor = new GameObject("Mesh" + bottomLeftCorner, typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider));
 
         dungeonFloor.transform.position = Vector3.zero;
         dungeonFloor.transform.localScale = Vector3.one;
         dungeonFloor.GetComponent<MeshFilter>().mesh = mesh;
         dungeonFloor.GetComponent<MeshRenderer>().material = material;
+        dungeonFloor.GetComponent<MeshCollider>();
         dungeonFloor.transform.parent = transform;
 
         for (int row = (int)bottomLeftV.x; row < (int)bottomRightV.x; row++)
