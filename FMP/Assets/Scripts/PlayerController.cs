@@ -2,24 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody myRigidBody;
-    Vector3 velocity;
+    [SerializeField] Transform playerCamera = null;
+    // Start is called before the first frame update
     void Start()
     {
-        myRigidBody = GetComponent<Rigidbody>();
+        
     }
 
-    public void Move(Vector3 _velocity)
+    // Update is called once per frame
+    void Update()
     {
-        velocity = _velocity;
+        
     }
-
-    public void FixedUpdate()
-    {
-        myRigidBody.MovePosition(myRigidBody.position + velocity * Time.fixedDeltaTime); 
-    }
-
 }
