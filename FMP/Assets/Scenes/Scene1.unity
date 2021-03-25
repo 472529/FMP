@@ -26312,7 +26312,7 @@ PrefabInstance:
     - target: {fileID: 5716190029026395772, guid: 0cff65933cbfe0340b16640888c50186,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5716190029026395772, guid: 0cff65933cbfe0340b16640888c50186,
         type: 3}
@@ -29033,6 +29033,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 749177950626822496, guid: 24e70c103afbe4e45b916059179d68a7,
+        type: 3}
+      propertyPath: RecoilRotationTranform
+      value: 
+      objectReference: {fileID: 412877153}
+    - target: {fileID: 749177950626822496, guid: 24e70c103afbe4e45b916059179d68a7,
+        type: 3}
+      propertyPath: RecoilPositionTranform
+      value: 
+      objectReference: {fileID: 1722872210}
+    - target: {fileID: 749177950626822800, guid: 24e70c103afbe4e45b916059179d68a7,
+        type: 3}
+      propertyPath: fpsCam
+      value: 
+      objectReference: {fileID: 1220459838}
     - target: {fileID: 749177950626822814, guid: 24e70c103afbe4e45b916059179d68a7,
         type: 3}
       propertyPath: m_Name
@@ -29076,7 +29091,7 @@ PrefabInstance:
     - target: {fileID: 749177950626822815, guid: 24e70c103afbe4e45b916059179d68a7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 749177950626822815, guid: 24e70c103afbe4e45b916059179d68a7,
         type: 3}
@@ -29093,6 +29108,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 749177950626822815, guid: 24e70c103afbe4e45b916059179d68a7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 749177950626822815, guid: 24e70c103afbe4e45b916059179d68a7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946740391882833310, guid: 24e70c103afbe4e45b916059179d68a7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1192486887}
+    - target: {fileID: 7946740391882833310, guid: 24e70c103afbe4e45b916059179d68a7,
+        type: 3}
+      propertyPath: gunContainer
+      value: 
+      objectReference: {fileID: 809092439}
+    - target: {fileID: 7946740391882833310, guid: 24e70c103afbe4e45b916059179d68a7,
+        type: 3}
+      propertyPath: fpsCam
+      value: 
+      objectReference: {fileID: 1220459835}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24e70c103afbe4e45b916059179d68a7, type: 3}
 --- !u!1 &1052472284
