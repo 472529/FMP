@@ -10,10 +10,10 @@ public class Gun : MonoBehaviour
 
     PlayerController player;
     public Camera fpsCam;
-    ParticleSystem muzzleFlash;
-    GameObject impactEffect;
-    New_Weapon_Recoil_Script recoil;
-    AudioSource gunSound;
+    public ParticleSystem muzzleFlash;
+    public GameObject impactEffect;
+    public New_Weapon_Recoil_Script recoil;
+    public AudioSource gunSound;
 
     private float nextTimeForFire = 2f;
 
@@ -21,8 +21,10 @@ public class Gun : MonoBehaviour
     {
         gunSound = GetComponent<AudioSource>();
         recoil = GetComponent<New_Weapon_Recoil_Script>();
-        fpsCam = gameObject.GetComponent<Camera>();
-        
+        fpsCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        impactEffect = GameObject.FindGameObjectWithTag("DefaultHit");
+        gunSound = GetComponent<AudioSource>();
+
     }
     void Update()
     {

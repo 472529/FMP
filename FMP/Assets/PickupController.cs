@@ -19,6 +19,9 @@ public class PickupController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<BoxCollider>();
+        player = GameObject.FindGameObjectWithTag("Player").transform.transform;
+        gunContainer = GameObject.FindGameObjectWithTag("GunContainer").transform.transform;
+        fpsCam = GameObject.FindGameObjectWithTag("MainCamera").transform.transform;
         if (!equipped)
         {
             gunScript.enabled = false;

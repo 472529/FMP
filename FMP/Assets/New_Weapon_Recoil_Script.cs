@@ -29,7 +29,11 @@ public class New_Weapon_Recoil_Script : MonoBehaviour
     public Vector3 RotationOutput;
 
     public bool aim;
-
+    private void Start()
+    {
+        RecoilPositionTranform = GameObject.FindGameObjectWithTag("RecoilPosition").transform.transform;
+        RecoilRotationTranform = GameObject.FindGameObjectWithTag("RecoilRotation").transform.transform;
+    }
     void FixedUpdate()
     {
         CurrentRecoil1 = Vector3.Lerp(CurrentRecoil1, Vector3.zero, Recoil1 * Time.deltaTime);
