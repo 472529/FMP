@@ -14635,6 +14635,7 @@ MonoBehaviour:
   impactForce: 30
   fireRate: 10
   maxAmmo: 20
+  allAmmo: 40
   reloadTime: 1
   anim: {fileID: 407986319783801157}
   fpsCam: {fileID: 0}

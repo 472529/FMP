@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     public float fireRate = 2f;
 
     public int maxAmmo;
+    public int allAmmo;
     private int currentAmmo;
     public float reloadTime = 2f;
     private bool isReloading = false;
@@ -48,13 +49,19 @@ public class Gun : MonoBehaviour
             return;
         }
 
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeForFire)
+        if (allAmmo <= 0)
+        {
+
+        }
+
+        else if (Input.GetButton("Fire1") && Time.time >= nextTimeForFire && allAmmo >= 0)
         {
             nextTimeForFire = Time.time + 1f / fireRate;
             Shoot();
         }
 
         
+
 
     }
 
@@ -95,10 +102,12 @@ public class Gun : MonoBehaviour
 
         anim.SetBool("Reloading", true);
 
-        yield return new WaitForSeconds(reloadTime);
-
+        yield return new WaitForSeconds(reloadTime - .25f);
         anim.SetBool("Reloading", false);
+        yield return new WaitForSeconds(reloadTime - .25f);
+
         currentAmmo = maxAmmo;
+        allAmmo -= maxAmmo;
         isReloading = false;
     }
 }

@@ -64,11 +64,13 @@ using System.Collections.Generic;
     using System.Net;
 #endif
 
+
+
 [RequireComponent(typeof(CapsuleCollider)),RequireComponent(typeof(Rigidbody)),AddComponentMenu("First Person AIO")]
 
 public class FirstPersonAIO : MonoBehaviour {
 
-
+    private Gun gun = null;
     #region Variables
 
     #region Input Settings
@@ -718,7 +720,16 @@ public class FirstPersonAIO : MonoBehaviour {
         #endregion
     }
 
- 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Ammo")
+        {
+            gun.allAmmo += 20;
+            Destroy(other.gameObject);
+        }
+    }
+
+
 
     public IEnumerator CameraShake(float Duration, float Magnitude){
         float elapsed =0;
@@ -1537,6 +1548,7 @@ public class FirstPersonAIO : MonoBehaviour {
                 break;
             }
         }
+        
         public static void DownloadImage(string url)
          {
              using (WebClient client = new WebClient())

@@ -9,6 +9,7 @@ TagManager:
   - RecoilPosition
   - RecoilRotation
   - DefaultHit
+  - Ammo
   layers:
   - Default
   - TransparentFX
