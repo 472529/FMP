@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 1987675021125746339}
   - component: {fileID: 1987675021125746348}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1987675021008923934}
   enableCameraShake: 1
   autoCrosshair: 1
-  drawStaminaMeter: 1
+  drawStaminaMeter: 0
   Crosshair: {fileID: 21300000, guid: 7fa7752f7f2a3fc4fbc2bcaea5671e2d, type: 3}
   targetAngles: {x: 0, y: 0, z: 0}
   playerCanMove: 1
@@ -292,7 +292,7 @@ MonoBehaviour:
   canHoldJump: 0
   useStamina: 1
   staminaDepletionSpeed: 2
-  staminaLevel: 50
+  staminaLevel: 100
   speed: 0
   staminaInternal: 0
   _crouchModifiers:
@@ -306,7 +306,7 @@ MonoBehaviour:
     gravityMultiplier: 1
     zeroFrictionMaterial: {fileID: 0}
     highFrictionMaterial: {fileID: 0}
-    maxSlopeAngle: 70
+    maxSlopeAngle: 55
     maxWallShear: 89
     maxStepHeight: 0.2
     curntGroundNormal: {x: 0, y: 0, z: 0}
@@ -327,7 +327,7 @@ MonoBehaviour:
   jumpLandIntensity: 3
   enableAudioSFX: 1
   Volume: 5
-  jumpSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: ffeb60b812fdc464499d8bd1c46cd055, type: 3}
   landSound: {fileID: 8300000, guid: ffeb60b812fdc464499d8bd1c46cd055, type: 3}
   footStepSounds:
   - {fileID: 8300000, guid: a3eb761c67da86e4d95a714d5040e215, type: 3}

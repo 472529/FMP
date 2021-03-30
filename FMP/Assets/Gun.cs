@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Gun : MonoBehaviour
 {
@@ -7,6 +8,12 @@ public class Gun : MonoBehaviour
     public float range = 100f;
     public float impactForce = 30f;
     public float fireRate = 2f;
+
+    public int maxAmmo;
+    private int currentAmmo;
+    public float reloadTime = 2f;
+    private bool isReloading = false;
+    public Animator anim;
 
     PlayerController player;
     public Camera fpsCam;
@@ -25,15 +32,29 @@ public class Gun : MonoBehaviour
         impactEffect = GameObject.FindGameObjectWithTag("DefaultHit");
         gunSound = GetComponent<AudioSource>();
 
+        currentAmmo = maxAmmo;
+
     }
     void Update()
     {
-        
+        if (isReloading)
+        {
+            return;
+        }
+
+        if (currentAmmo <= 0)
+        {
+            StartCoroutine(Reload());
+            return;
+        }
+
         if (Input.GetButton("Fire1") && Time.time >= nextTimeForFire)
         {
             nextTimeForFire = Time.time + 1f / fireRate;
             Shoot();
         }
+
+        
 
     }
 
@@ -43,6 +64,8 @@ public class Gun : MonoBehaviour
         recoil.Fire();
         muzzleFlash.Play();
         RaycastHit hit;
+
+        currentAmmo--;
 
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
@@ -62,8 +85,20 @@ public class Gun : MonoBehaviour
             GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactGO, 2f);
 
-        }
+        }  
+    }
 
-        
+    IEnumerator Reload()
+    {
+        isReloading = true;
+        Debug.Log("Reloading...");
+
+        anim.SetBool("Reloading", true);
+
+        yield return new WaitForSeconds(reloadTime);
+
+        anim.SetBool("Reloading", false);
+        currentAmmo = maxAmmo;
+        isReloading = false;
     }
 }
