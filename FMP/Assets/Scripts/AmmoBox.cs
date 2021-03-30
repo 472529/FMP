@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AmmoBox : MonoBehaviour
 {
-    private Gun gun;
-
+    public Gun gun;
     private void OnTriggerEnter(Collider other)
     {
+        gun = GetComponent<Gun>();
         if (other.gameObject.tag.Equals("Player"))
         {
-            gun.maxAmmo += 20;
+            gun.allAmmo += 20;
             Destroy(gameObject);
         }
     }

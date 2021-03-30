@@ -70,7 +70,7 @@ using System.Collections.Generic;
 
 public class FirstPersonAIO : MonoBehaviour {
 
-    private Gun gun = null;
+    private Gun gun;
     #region Variables
 
     #region Input Settings
@@ -720,7 +720,7 @@ public class FirstPersonAIO : MonoBehaviour {
         #endregion
     }
 
-    private void OnTriggerEnter(Collider other)
+/*    private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Ammo")
         {
@@ -728,7 +728,7 @@ public class FirstPersonAIO : MonoBehaviour {
             Destroy(other.gameObject);
         }
     }
-
+*/
 
 
     public IEnumerator CameraShake(float Duration, float Magnitude){
