@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
+    public float enemyHealth;
+    public float bulletDamg = 10;
 
     public GameObject bullet;
     public Transform player;
