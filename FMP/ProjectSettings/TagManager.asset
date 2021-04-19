@@ -10,6 +10,7 @@ TagManager:
   - RecoilRotation
   - DefaultHit
   - Ammo
+  - Gun
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - Player
   - Ground
-  - 
+  - Wall
   - 
   - 
   - 
