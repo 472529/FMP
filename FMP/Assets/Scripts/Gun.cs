@@ -11,7 +11,7 @@ public class Gun : MonoBehaviour
 
     public int maxAmmo;
     public int allAmmo;
-    private int currentAmmo;
+    public int currentAmmo;
     public float reloadTime = 2f;
     private bool isReloading = false;
     public Animator anim;

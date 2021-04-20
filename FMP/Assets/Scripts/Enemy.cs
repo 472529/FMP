@@ -11,11 +11,18 @@ public class Enemy : MonoBehaviour
     public float enemyHealth;
     public float bulletDamg = 10;
 
+    public LayerMask whatIsPlayer;
+
     public GameObject bullet;
     public Transform player;
+    public Player p;
 
     private float timeBtwShots;
     public float startTimeBtwShots;
+    public float attackRange;
+    public float sightRange;
+
+    public bool playerInSightRange;
     
 
     // Start is called before the first frame update
@@ -28,6 +35,17 @@ public class Enemy : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+
+        if (playerInSightRange)
+        {
+            FollowPlayer();
+        }
+
+    }
+
+    void FollowPlayer()
     {
         if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
@@ -45,11 +63,19 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(bullet, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
+            
+
         }
         else
         {
             timeBtwShots -= Time.deltaTime;
         }
-
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }

@@ -14660,7 +14660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2142907b7b72514ea61e8cbc748f26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunScript: {fileID: 0}
+  gunScript: {fileID: 7747620981003861701}
   rb: {fileID: 0}
   col: {fileID: 0}
   player: {fileID: 0}

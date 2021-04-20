@@ -11,6 +11,7 @@ TagManager:
   - DefaultHit
   - Ammo
   - Gun
+  - UI
   layers:
   - Default
   - TransparentFX

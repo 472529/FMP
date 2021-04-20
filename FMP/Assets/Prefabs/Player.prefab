@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1987675021008923934}
   - component: {fileID: 1987675021008923935}
   - component: {fileID: 1987675021008923928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1987675021125746338}
   - component: {fileID: 1987675021125746339}
   - component: {fileID: 1987675021125746348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987675021213809516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RecoilCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987675021497094721}
   - component: {fileID: 1987675021497094720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987675021907107071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GunContainer
   m_TagString: GunContainer
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987675022089929539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RecoilRotation
   m_TagString: RecoilRotation
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987675022117776961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RecoilPosition
   m_TagString: RecoilPosition
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987675022519963273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HeadJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
