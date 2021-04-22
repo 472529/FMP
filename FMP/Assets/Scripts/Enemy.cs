@@ -15,8 +15,9 @@ public class Enemy : MonoBehaviour
 
     public GameObject bullet;
     public Transform player;
-    public Player p;
-
+    Transform lookingAt;
+    public ParticleSystem muzzleFlash;
+    
     private float timeBtwShots;
     public float startTimeBtwShots;
     public float attackRange;
@@ -24,23 +25,31 @@ public class Enemy : MonoBehaviour
 
     public bool playerInSightRange;
     
+    
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        muzzleFlash = GameObject.FindGameObjectWithTag("EnemyMuzzleFlash").GetComponent<ParticleSystem>();
 
         timeBtwShots = startTimeBtwShots;
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        muzzleFlash.Play();
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
 
         if (playerInSightRange)
         {
             FollowPlayer();
+            
+            transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+            transform.LookAt(2 * transform.position - player.position);
         }
 
     }
@@ -61,6 +70,7 @@ public class Enemy : MonoBehaviour
         }
         if (timeBtwShots < -0)
         {
+            muzzleFlash.Play();
             Instantiate(bullet, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
             

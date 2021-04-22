@@ -54,15 +54,15 @@ public class Gun : MonoBehaviour
         {
 
         }
-
-        if (Input.GetKey(KeyCode.R) && !isReloading)
+        /*else if (Input.GetKey(KeyCode.R) && !isReloading)
         {
             StartCoroutine(Reload());
-        }
+        }*/
 
         else if (Input.GetButton("Fire1") && Time.time >= nextTimeForFire && allAmmo >= 0)
         {
             nextTimeForFire = Time.time + 1f / fireRate;
+            muzzleFlash.Play();
             Shoot();
         }
 
@@ -76,7 +76,7 @@ public class Gun : MonoBehaviour
         isReloading = false;
         gunSound.Play();
         recoil.Fire();
-        muzzleFlash.Play();
+        
         RaycastHit hit;
 
         currentAmmo--;
@@ -115,7 +115,15 @@ public class Gun : MonoBehaviour
         anim.SetBool("Reloading", false);
         yield return new WaitForSeconds(reloadTime - .25f);
 
-        currentAmmo = maxAmmo;
+        if (allAmmo > 0)
+        {
+            currentAmmo = maxAmmo;
+        }
+        else
+        {
+        
+        }
+        
         allAmmo -= maxAmmo;
         isReloading = false;
     }

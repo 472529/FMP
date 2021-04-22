@@ -60,7 +60,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 60
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 1987675021125746338}
   - component: {fileID: 1987675021125746339}
   - component: {fileID: 1987675021125746348}
+  - component: {fileID: -6584489168326919118}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -279,7 +280,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1987675021008923934}
   enableCameraShake: 1
   autoCrosshair: 0
-  drawStaminaMeter: 0
+  drawStaminaMeter: 1
   Crosshair: {fileID: 21300000, guid: 7fa7752f7f2a3fc4fbc2bcaea5671e2d, type: 3}
   targetAngles: {x: 0, y: 0, z: 0}
   playerCanMove: 1
@@ -291,7 +292,7 @@ MonoBehaviour:
   canJump: 1
   canHoldJump: 0
   useStamina: 1
-  staminaDepletionSpeed: 2
+  staminaDepletionSpeed: 1
   staminaLevel: 100
   speed: 0
   staminaInternal: 0
@@ -395,6 +396,22 @@ MonoBehaviour:
     - {fileID: 8300000, guid: fef61cddf814a2c49bf7a6c33791c766, type: 3}
     - {fileID: 8300000, guid: 73f938638097f8042ad7842aa5b04ac5, type: 3}
     - {fileID: 8300000, guid: e06c6ae1948cafd45a952ab85ebe4fa7, type: 3}
+--- !u!114 &-6584489168326919118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987675021125746350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20901b15f40aa0f4e9afc525e0759450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  isLoadScene: 0
 --- !u!1 &1987675021213809517
 GameObject:
   m_ObjectHideFlags: 0

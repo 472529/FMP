@@ -9,6 +9,7 @@ public class AmmoCounter : MonoBehaviour
     public GameObject player;
     public Gun gun = null;
     public TMP_Text text;
+    public PickupController PUC;
 
     
 
@@ -18,7 +19,21 @@ public class AmmoCounter : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         text = GameObject.FindGameObjectWithTag("UI").GetComponent<TMP_Text>();
         gun = GameObject.FindGameObjectWithTag("GunContainer").GetComponentInChildren<Gun>();
-        text.text = "Ammo " + gun.currentAmmo + " / " + (gun.allAmmo + gun.currentAmmo);
+        PUC = GameObject.FindGameObjectWithTag("GunContainer").GetComponentInChildren<PickupController>();
+
+        PickupChecker();
+    }
+
+    public void PickupChecker()
+    {
+        if (PUC.equipped)
+        {
+            text.text = "Ammo " + gun.currentAmmo + " / " + (gun.allAmmo);
+        }
+        else
+        {
+           
+        }
     }
 
 }

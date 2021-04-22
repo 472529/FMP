@@ -12,6 +12,8 @@ TagManager:
   - Ammo
   - Gun
   - UI
+  - UIHealth
+  - EnemyMuzzleFlash
   layers:
   - Default
   - TransparentFX

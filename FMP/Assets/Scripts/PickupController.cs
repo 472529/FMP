@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickupController : MonoBehaviour
 {
     public Gun gunScript;
+    public Player p;
     public Rigidbody rb;
     public BoxCollider col;
     public Transform player, gunContainer, fpsCam;
@@ -19,6 +20,7 @@ public class PickupController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<BoxCollider>();
+        p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player = GameObject.FindGameObjectWithTag("Player").transform.transform;
         gunContainer = GameObject.FindGameObjectWithTag("GunContainer").transform.transform;
         fpsCam = GameObject.FindGameObjectWithTag("MainCamera").transform.transform;
@@ -81,5 +83,15 @@ public class PickupController : MonoBehaviour
 
 
         gunScript.enabled = false;
+    }
+
+    public void Sceneloaded()
+    {
+        if (p.isLoadScene == true)
+        {
+            equipped = false;
+            slotFull = false;
+            gunScript.enabled = false;
+        }
     }
 }
