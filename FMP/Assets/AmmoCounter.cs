@@ -7,7 +7,7 @@ using TMPro;
 public class AmmoCounter : MonoBehaviour
 {
     public GameObject player;
-    public Gun gun = null;
+    public Gun gun;
     public TMP_Text text;
     public PickupController PUC;
 
@@ -19,21 +19,19 @@ public class AmmoCounter : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         text = GameObject.FindGameObjectWithTag("UI").GetComponent<TMP_Text>();
         gun = GameObject.FindGameObjectWithTag("GunContainer").GetComponentInChildren<Gun>();
-        PUC = GameObject.FindGameObjectWithTag("GunContainer").GetComponentInChildren<PickupController>();
-
-        PickupChecker();
+        
+        if(gun == null)
+        {
+           
+        }
+        else
+        {
+            PickupChecker();
+        }
     }
 
     public void PickupChecker()
     {
-        if (PUC.equipped)
-        {
-            text.text = "Ammo " + gun.currentAmmo + " / " + (gun.allAmmo);
-        }
-        else
-        {
-           
-        }
+        text.text = "Ammo " + gun.currentAmmo + " / " + (gun.allAmmo);
     }
-
 }
