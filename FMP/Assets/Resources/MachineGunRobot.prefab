@@ -303,7 +303,7 @@ MonoBehaviour:
   stoppingDistance: 5
   retreatDistance: 3
   enemyHealth: 50
-  bulletDamg: 50
+  bulletDamg: 10
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -312,7 +312,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 894204289404826637}
   startTimeBtwShots: 4
   attackRange: 5
-  sightRange: 15
+  sightRange: 5
   playerInSightRange: 0
 --- !u!114 &1069436532642847728
 MonoBehaviour:

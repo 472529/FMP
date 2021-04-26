@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Spanwer()
     {
-       float rand = Random.Range(-1, 2);
+       float rand = Random.Range(-5, 4);
 
        if(rand == 1)
         {
