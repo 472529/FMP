@@ -303,7 +303,7 @@ MonoBehaviour:
   stoppingDistance: 5
   retreatDistance: 3
   enemyHealth: 50
-  bulletDamg: 50
+  bulletDamg: 10
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
