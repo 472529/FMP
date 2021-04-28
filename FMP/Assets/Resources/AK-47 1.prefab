@@ -14545,7 +14545,7 @@ MonoBehaviour:
   fireRate: 10
   maxAmmo: 20
   allAmmo: 40
-  currentAmmo: 0
+  currentAmmo: 20
   reloadTime: 1
   anim: {fileID: 407986319783801157}
   fpsCam: {fileID: 0}
@@ -14581,7 +14581,7 @@ MonoBehaviour:
   CurrentRecoil2: {x: 0, y: 0, z: 0}
   CurrentRecoil3: {x: 0, y: 0, z: 0}
   CurrentRecoil4: {x: 0, y: 0, z: 0}
-  RotationOutput: {x: -3e-45, y: 3e-45, z: 0}
+  RotationOutput: {x: 0, y: 0, z: 0}
   aim: 0
 --- !u!114 &27533609845051443
 MonoBehaviour:

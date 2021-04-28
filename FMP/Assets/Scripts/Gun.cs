@@ -117,11 +117,11 @@ public class Gun : MonoBehaviour
 
         if (allAmmo > 0)
         {
-            currentAmmo = maxAmmo;
+            currentAmmo += maxAmmo;
         }
-        else
+        else if(allAmmo <= 0)
         {
-        
+           
         }
         
         allAmmo -= maxAmmo;

@@ -14606,7 +14606,7 @@ MonoBehaviour:
   CurrentRecoil2: {x: 0, y: 0, z: 0}
   CurrentRecoil3: {x: 0, y: 0, z: 0}
   CurrentRecoil4: {x: 0, y: 0, z: 0}
-  RotationOutput: {x: -3e-45, y: 3e-45, z: 0}
+  RotationOutput: {x: 0, y: 0, z: 0}
   aim: 0
 --- !u!114 &7747620981003861701
 MonoBehaviour:
