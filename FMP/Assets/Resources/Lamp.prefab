@@ -147,9 +147,9 @@ MonoBehaviour:
   GroundLevel: 0
   Noise: 1
   NoiseScale: 1
-  NoiseIntensity: 4.5
+  NoiseIntensity: 2
   NoiseIntensityOffset: 0.3
-  NoiseVelocity: {x: 3, y: 3}
+  NoiseVelocity: {x: 0.5, y: 0.5}
   MaxRayLength: 400
 --- !u!1 &4014835406594555591
 GameObject:
