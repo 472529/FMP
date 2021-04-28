@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1987675021008923934}
   - component: {fileID: 1987675021008923935}
   - component: {fileID: 1987675021008923928}
+  - component: {fileID: 3264589520901166821}
   m_Layer: 8
   m_Name: Player Camera
   m_TagString: MainCamera
@@ -94,6 +95,20 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987675021008923930}
   m_Enabled: 1
+--- !u!114 &3264589520901166821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987675021008923930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eed1d9cbe64423499f1fefc0ce50417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resolution: 0
+  DefaultSpotCookie: {fileID: 2800000, guid: 5157bf6d690b6df458f6c0ce0c06d329, type: 3}
 --- !u!1 &1987675021125746350
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +427,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 0}
   isLoadScene: 0
+  flashLight: {fileID: 0}
 --- !u!1 &1987675021213809517
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,9 +469,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1987675021497094721}
   - component: {fileID: 1987675021497094720}
+  - component: {fileID: 1253611847743607927}
   m_Layer: 8
   m_Name: Spot Light
-  m_TagString: Untagged
+  m_TagString: Flashlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,7 +503,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 20
   m_SpotAngle: 38.310135
   m_InnerSpotAngle: 21.80208
@@ -535,6 +552,32 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1253611847743607927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987675021497094722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafc90245bfe9e2408e358f71deace2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SampleCount: 12
+  ScatteringCoef: 0.1
+  ExtinctionCoef: 0.01
+  SkyboxExtinctionCoef: 0.9
+  MieG: 0.1
+  HeightFog: 0
+  HeightScale: 0.1
+  GroundLevel: 0
+  Noise: 0
+  NoiseScale: 0.015
+  NoiseIntensity: 1
+  NoiseIntensityOffset: 0.3
+  NoiseVelocity: {x: 3, y: 3}
+  MaxRayLength: 400
 --- !u!1 &1987675021907107064
 GameObject:
   m_ObjectHideFlags: 0

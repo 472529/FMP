@@ -14,6 +14,7 @@ TagManager:
   - UI
   - UIHealth
   - EnemyMuzzleFlash
+  - Flashlight
   layers:
   - Default
   - TransparentFX
