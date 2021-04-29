@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
     {
         if(currentHealth <= 0)
         {
+            
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             isLoadScene = true;

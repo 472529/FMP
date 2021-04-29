@@ -14,7 +14,15 @@ public class LightSpawner : MonoBehaviour
 
     void Spawner()
     {
-        Instantiate(light, transform.position, transform.rotation);
-
+        float rand = Random.Range(0, 4);
+        if (rand == 0)
+        {
+            Debug.Log("0");
+            Instantiate(light, transform.position, transform.rotation);
+        }
+        else
+        {
+        
+        }
     }
 }

@@ -43,17 +43,18 @@ public class Gun : MonoBehaviour
         {
             return;
         }
+        if (allAmmo <= 0)
+        {
 
-        if (currentAmmo <= 0)
+        }
+
+        else if (currentAmmo == 0)
         {
             StartCoroutine(Reload());
             return;
         }
 
-        if (allAmmo <= 0)
-        {
-
-        }
+        
         /*else if (Input.GetKey(KeyCode.R) && !isReloading)
         {
             StartCoroutine(Reload());
@@ -97,7 +98,7 @@ public class Gun : MonoBehaviour
             }
 
             GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGO, 2f);
+            //Destroy(impactGO, 2f);
 
         }  
     }
@@ -118,13 +119,13 @@ public class Gun : MonoBehaviour
         if (allAmmo > 0)
         {
             currentAmmo += maxAmmo;
+            allAmmo -= maxAmmo;
         }
-        else if(allAmmo <= 0)
+        else
         {
            
         }
-        
-        allAmmo -= maxAmmo;
+
         isReloading = false;
     }
 }

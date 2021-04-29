@@ -32,6 +32,6 @@ public class AmmoCounter : MonoBehaviour
 
     public void PickupChecker()
     {
-        text.text = "Ammo " + gun.currentAmmo + " / " + (gun.allAmmo);
+        text.text = "Ammo " + gun.currentAmmo + " / " + (gun.allAmmo - gun.maxAmmo);
     }
 }
