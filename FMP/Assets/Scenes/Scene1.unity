@@ -19044,6 +19044,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1e4af2fe47d74489dbb3b5ddd970f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p: {fileID: 0}
+  pickupController: {fileID: 0}
+  gunContainer: {fileID: 0}
 --- !u!65 &740497972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35360,7 +35363,7 @@ PrefabInstance:
     - target: {fileID: 8925307859915256562, guid: 631e2b42358c7b0489238629d3a2f8bb,
         type: 3}
       propertyPath: m_Value
-      value: 2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8925307860322731026, guid: 631e2b42358c7b0489238629d3a2f8bb,
         type: 3}
